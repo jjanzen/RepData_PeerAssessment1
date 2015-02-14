@@ -138,9 +138,9 @@ stepsByIntervalWeekday <- sqldf("select interval, avg(avg_steps) as steps from w
 
 par(mfrow=c(1,1))  
 with(stepsByIntervalDate, plot(avg_steps ~ interval, type="n", main="Weekday vs. Weekend Avg.", ylab = "steps", ylim=c(0,300)))  
-with(stepsByIntervalWeekend, lines(steps ~ interval, type="l", col="chocolate"))  
+with(stepsByIntervalWeekend, lines(steps ~ interval, type="l", col="green"))  
 with(stepsByIntervalWeekday, lines(steps ~ interval, type="l", col="16" ))  
-legend("topright", lty=c(1,1), col = c("chocolate", "16"), legend = c("weekday", "weekend"), seg.len=3)
+legend("topright", lty=c(1,1), col = c("green", "16"), legend = c("weekday", "weekend"), seg.len=3)
 ```
 
 ![](PA1_template_files/figure-html/unnamed-chunk-5-1.png) 
